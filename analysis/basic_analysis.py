@@ -30,7 +30,7 @@ def adding(x):
     return sum
 
 # Function 05
-def print_list(list):
+def add_list(list):
     total = 0
     for i in range(len(list)):
         total += list[i]
