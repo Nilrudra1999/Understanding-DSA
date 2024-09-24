@@ -4,7 +4,9 @@ Before performing any asymptotic analysis its paramount to understand the basic 
 What growth rates, upper and lower bounds, time complexity, and asymptotic analysis are, also how they all fit together.<br>
 
 A general definition with all the topics together can be as follows. Asymptotic analysis is a mathematical notation used to state the upper and lower bounds of a function $T(n)$. Where $T(n)$ represents the avg. growth rate of an algorithm, which measures the increase in resource consumption as the input data size increases. Upper bound can be expressed as 
-$T(n) = \leq c\cdot f(n)$ for all values of $n \geq n_0$ where (c) constant's value doesn't matter but is equivalent to (n).
+$T(n) \leq c\cdot f(n)$ for all values of $n \geq n_0$ where (c) constant's value doesn't matter but is equivalent to (n).
+
+![time-complexity-examples](https://github.com/user-attachments/assets/10eecc16-be0f-4c63-8463-ba0b3a29ac90)
 
 ### Data Structures: 
 
@@ -36,7 +38,7 @@ A way of measuring the growth rate of an algorithm as data sizes increase.
 
 ### Big-O Notation:
 
-An asymptotic notation that represents the upper bound of growth rate for a function $f(n)$ for any/all values of (n) representing the size of data. Formally expressed as $T(n) = \leq c\cdot f(n)$ for all values of (n) and (c) where $n \geq n_0$
+An asymptotic notation that represents the upper bound of growth rate for a function $f(n)$ for any/all values of (n) representing the size of data. Formally expressed as $T(n) \leq c\cdot f(n)$ for all values of (n) and (c) where $n \geq n_0$
 
 ### Time Complexity: 
 
