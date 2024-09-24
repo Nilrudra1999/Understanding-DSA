@@ -14,7 +14,7 @@ Each time greet() is called it always takes the same amount of time to process.
 ## Analysis on Function 2: apples()
 
 Let n represent the value passed to the function<br>
-Let T(n) represent the total number of operations done by the function apples()
+Let T(n) represent the total number of operations done by apples() given n
 
 ```python
 def apples(n):
@@ -30,7 +30,7 @@ Here each line of the function only takes a constant amount of time.
 ## Analysis on Function 3: fruit()
 
 Let n represent the value passed to the function<br>
-Let T(n) represent the total number of operations done by fruit()
+Let T(n) represent the total number of operations done by fruit() given n
 
 ```python
 def fruit(n):
@@ -41,12 +41,14 @@ def fruit(n):
 $T(n) = 1 + 1 + 1$<br>
 $T(n) = 4$<br>
 Therefore, T(n) is O(1) constant time complexity.<br>
-Here we do account for the time taken by apples() as part of the analysis, but since its time complexity is O(1), it doesn't depend on n. Which is why the call to the function is counted but not in relation to n but as a single constant value.
+Here we do account for the time taken by apples() as part of the analysis, but since it's time complexity is O(1), it doesn't depend on n. Which is why the call to the function is counted but not in relation to n but as a single constant value.
 
 ## Analysis on Function 4: adding()
 
-Let n represent the value of the number passed to the function<br>
-Let T(n) represent the total number of operations performed by adding()
+Let x represent the value of the number passed to the function<br>
+Let n represent the value derived from x for the number of iterations for a loop<br>
+Let m represent the value derived from x for the number of iterations for a loop<br>
+Let T(x) represent the total number of operations performed by adding() given x
 
 ```python
 def adding(x):
@@ -62,19 +64,19 @@ def adding(x):
     return sum              # 1
 ```
 
-$T(n) = 1 + 3 + 3 + (n+1) + n + (m+1) + m + ((m+8)+1) + (m+8) + 1$<br>
-$T(n) = 11 + 16 + 2n + 4m$<br>
-$T(n) = 2n + 4m + 27$<br>
-$n = \frac{x^2}{2} m = \frac{x^2}{4}$<br>
-$T(n) = 2(\frac{x^2}{2}) + 4(\frac{x^2}{4}) + 27$<br>
-$T(n) = 2x^2 + 27$<br>
-Therefore, T(n) is O($x^2$) quadratic time complexity.<br>
-Here there are 3 loops, 2 of which iterate using 2 different variables, where each variable represents the number of iterations of the loops. Loop 1 iterates for n times, loop 2 iterates for m times, and loop 3 iterates for m+8 times, where both (n) and (m) are dervied from (x).
+$T(x) = 1 + 3 + 3 + (n+1) + n + (m+1) + m + ((m+8)+1) + (m+8) + 1$<br>
+$T(x) = 11 + 16 + 2n + 4m$<br>
+$T(x) = 2n + 4m + 27$<br>
+$n = \frac{x^2}{2}$ $m = \frac{x^2}{4}$<br>
+$T(x) = 2(\frac{x^2}{2}) + 4(\frac{x^2}{4}) + 27$<br>
+$T(x) = 2x^2 + 27$<br>
+Therefore, T(x) is O($x^2$) quadratic time complexity.<br>
+Here there are 3 loops, 2 of which iterate using 2 different variables, where each variable is derived from x which the value of the number passed to this function.
 
 ## Aanalysis on Function 5: add_list()
 
 Let n represent the length of the list passed to the function<br>
-Let T(n) represent the total number of operations done by add_list()
+Let T(n) represent the total number of operations done by add_list() given n
 
 ```python
 def add_list(list):
