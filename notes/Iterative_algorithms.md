@@ -48,7 +48,7 @@ for i in range(n):      # n
         # something
 ```
 
-In the above code snippet, the inner iterates from j=0 ... j=(n-1) and the outer loops iterates for (n) times individually, but the inner loop together with the outer loop runs (n(n+1))/2 times substituted for (n-1). Thus, the inner loop iterates for (n(n-1))/2 times.
+In the above code snippet, the inner iterates from j=0 ... j=(i-1), the outer loop iterates from i=0 ... i=(n-1) so (n) times. We sub that into the inner loop. j=((n)-1) thus now the inner loop runs till j=(n-1) and we sub that into the arithemtic series formula (n(n+1))/2 to get (n(n-1))/2 times. The iterations of the inner loop. 
 
 ```python
 for i in range(n):      # n
@@ -59,9 +59,19 @@ for i in range(n):      # n
 In this other code snippet above, both loops run for (n) times however, the inner loop runs for (n) multipled the outer loop so ($n^2$).
 
 ```python
-for i in range(n):          # n
+for i in range(n):          # n + 1
     for j in range(i+1):    # n(n+1)/2
         # something
 ```
 
-In this case, the inner loop runs till (n) instead of till (n-1) since the condition of the loop makes it so that it iterates for the nth time. Thus instead of substituting (n) inside (n(n+1))/2 for (n-1), in this case we substitute just (n).
+In this case, the inner loop runs till j=(i+1) times, where the outer loop runs till i=(n-1). We sub (i) into the runtime of (j) and get the following j=(n) then we sub that into the arithemtic series formula and get the following, n(n+1)/2.
+
+So the way to think about nested loop in relation to one another is that when (j) is in relation to (i) we need to find up to what value of (n) do both loop run till. If (i) runs till n+4 and (j) runs till i+5 then we sub the value of (i) for n+4 and calculate up to what value of (n) does (j) run till.
+
+## Most Important Formulas
+
+- For calculating what value of (n) the loop runs till $n - y + x$ where range(y, n+x)
+- When the loop runs (n) times however, the value till what the loop runs till is always $n - 1$
+- For calculating nested loop value runs till $j = i - y + x$ where $i = n - y + x$
+- When the loop runs (i) times, the value at the end is $i - 1$ always
+- Nested loops that are related $\frac{n(n+1)}{2}$ where (n) is subbed for the value the inner loop runs till each iteration of the outer loop 
