@@ -19,8 +19,8 @@ def fruit(n):
 # Function 04
 def adding(x):
     sum = 0
-    n = (x*x)/2
-    m = (x*x)/4
+    n = (x*x)//2
+    m = (x*x)//4
     for i in range(n):
         sum += 1
     for j in range(m):
@@ -55,8 +55,9 @@ total_time = 0
 
 # Calling a function a certain number of times to measure time taken over all iterations
 for i in range(AMOUNT_OF_DATA):
+    my_list = random.sample(range(1, i*10), i)
     start_time = time.perf_counter()
-    result = greet()
+    result = add_list(my_list)
     end_time = time.perf_counter()
     total_time = (end_time-start_time)
-    print(f"Time for greet() = {total_time}")
+    print(total_time)
