@@ -73,5 +73,5 @@ So the way to think about nested loop in relation to one another is that when (j
 - For calculating what value of (n) the loop runs till $n - y + x$ where range(y, n+x)
 - When the loop runs (n) times however, the value till what the loop runs till is always $n - 1$
 - For calculating nested loop value runs till $j = i - y + x$ where $i = n - y + x$
-- When the loop runs (i) times, the value at the end is $i - 1$ always
+- When the loop runs (i) times, the value at the end is $n - 1$ always
 - Nested loops that are related $\frac{n(n+1)}{2}$ where (n) is subbed for the value the inner loop runs till each iteration of the outer loop 
