@@ -4,7 +4,7 @@ A lot of functions and algorithms use iteration to accomplish tasks. Iteration c
 
 ## Loop Structures Across Multiple Languages
 
-The general syntax varys a little across languages however, the way programs are executed from one language to another also makes a difference in the analysis of that piece of code. Thus, we need to take a basic loop structure from one language and translate it to other languages to view the differences, in both syntax and analysis.
+The general syntax varys a little across languages however, the way programs are executed from one language to another also makes a difference in the analysis of that piece of code.
 
 ### Python
 
@@ -15,7 +15,7 @@ for i in range(1, n+1): # n + 1
 
 In python, we can count the number of times the loop will run as i=1 ... i=(n+1) thus the loop will run (n) times.<br>
 The we also add 1 for calling the range function which has a constant time complexity O(1).<br>
-When the range() function is called we can typically calculate the number of times a loop will run in relation to (n) using this formula $n - y + x$. Where range(y, n + x), so in the case of the above code we could say $n - 1 + 1 = n$. If the loop adds a third parameter for the range function like so: range(1, y+1, 2) we can take the initial formula and divide it by that number, which is the value used to iterate through the loop.
+When the range() function is called we can typically calculate the number of times a loop will run in relation to (n). If the loop adds a third parameter for the range function like so: range(1, y+1, 2) we can take the initial runtime and divide it by that number, which is the value used to iterate through the loop.
 
 ### C++
 
@@ -25,7 +25,7 @@ for(int i=1; i < (n+1); i++) {  // 1 + n + (n+1)
 }
 ```
 
-In C++ however, the loop's condition takes many steps, first is the assignment (int i=1), then is the iterations (i++), and then it's the condition check (i < (n+1)). Thus, when constructing the loop we add 1 for the assignment (n) for the number of times the loop runs, and (n+1) always for the condition check, since the check occurs onces more than the loop itself.
+In C++, the loop's condition takes many steps. First is the assignment (int i=1), then is the iterations (i++), and finally it's the condition check (i < (n+1)). Thus, when constructing the loop we add 1 + (n) + (n+1) for assignment + iterations + condition checks.
 
 ### JavaScript
 
@@ -40,38 +40,67 @@ Here too we have an assignment, a condition check, and an iteration.
 
 ## Mathematics Behind Nested Loops
 
-When a loop is nested within another loop, the inner loop iterates for the sum of the number of times the outer loop iterates. Meaning that if the outer loop iterates for n = 3 times the inner loop will iterate for n = 1 + 2 + 3 times which is n = 6. The inner loop's iterations can be calculated using the formula from the arithemtic series (n(n+1))/2 where (n) is substituted for the number of iterations the inner loop takes individually.
+There are 2 main types of nested loops:
+- Ones where the inner loop is related to the outer loop
+- Ones where the inner loop runs independent of the outer loop's value
+
+If the inner loop runs independent of the outer loop's value then we count the number of iterations for the outer loop and multiple that to the number of iterations for the inner loop. That gives us the total number of iterations the inner loop makes.
+
+However, if the inner loop is dependent on the outer loop then we need to count the number of total iterations made by the inner loop each time the outer loop iterates which requires counting the loops and using the arithmetic series formula to sub the correct values in for the iterations.
 
 ```python
-for i in range(n):      # n
-    for j in range(i):  # n(n-1)/2
-        # something
+def fun(n):
+    total = 0                       # 1
+    for i in range(1, n+2):         # (n+1) + 1
+        for j in range(1, i+4):     # ((n+1)(n+8))/2 + 1
+            total += 1              # 1 * ((n+1)(n+8))/2
+    print(total)                    # 1
 ```
 
-In the above code snippet, the inner iterates from j=0 ... j=(i-1), the outer loop iterates from i=0 ... i=(n-1) so (n) times. We sub that into the inner loop. j=((n)-1) thus now the inner loop runs till j=(n-1) and we sub that into the arithemtic series formula (n(n+1))/2 to get (n(n-1))/2 times. The iterations of the inner loop. 
+To calculate the inner loop we first find the value till which (i) iterates till in relation to (n). Which is n+1 in this case<br>
+Then we find the value (j) iterates till in relation to (i) and we sub (n) for the relationship between (i) and (j)<br>
+$i = n+1$ and $j = i+3$<br>
+$j = \frac{m(m+1)}{2}$ where $m = n+1$<br>
+$j = \frac{(n+1)(n+2)}{2}$<br>
+$j = \frac{(n+1)(n+2)}{2} + 3(n+1)$<br>
+$j = \frac{(n+1)((n+2)+6)}{2}$<br>
+$j = \frac{(n+1)(n+8)}{2}$<br>
+
+$T(n) = 1 + (n+1) + 1 + \frac{(n+1)(n+8)}{2} + 1 + \frac{(n+1)(n+8)}{2} + 1$<br>
+$T(n) = (n+1)(n+8) + n + 5$<br>
+$T(n) = n^2 + 10n + 13$<br>
+Therefore, T(n) is O($n^2$) quadratic time complexity.
+
+### Now lets test this formula and method using an edge case.
+
+First edge case:<br>
+Here we start again by finding what (i) and (j) loop till in relation to (n) and (i) respectively.
 
 ```python
-for i in range(n):      # n
-    for j in range(n):  # n
-        # something
+def fun(n):
+    total = 0                   # 1
+    for i in range(n+1):        # (n+1) + 1
+        for j in range(i+5):    # ((n+1)(n+10))/2 + 1
+            total += 1          # 1 * ((n+1)(n+10))/2
+    print(total)                # 1
 ```
 
-In this other code snippet above, both loops run for (n) times however, the inner loop runs for (n) multipled the outer loop so ($n^2$).
+$i = n+1$ times and $j = i+5$ times<br>
+We sub $j = i+5$ for (n)<br>
+$i = \frac{n(n+1)}{2}$ where i loops from i=0 till i=n<br>
+Then we multiply the constant by the number of time (i) loops for so $5(n+1)$<br>
+$j = \frac{n(n+1)}{2} + 5(n+1)$<br>
+$j = \frac{(n+1)(n+10)}{2}$<br>
 
-```python
-for i in range(n):          # n + 1
-    for j in range(i+1):    # n(n+1)/2
-        # something
-```
+$T(n) = 1 + (n+1) + 1 + (n+1)(n+10) + 1 + 1$<br>
+$T(n) = n^2 + 12n + 15$<br>
+Therefore, T(n) is O($n^2$).
 
-In this case, the inner loop runs till j=(i+1) times, where the outer loop runs till i=(n-1). We sub (i) into the runtime of (j) and get the following j=(n) then we sub that into the arithemtic series formula and get the following, n(n+1)/2.
+This method works with 2 components;
+- the value of (i) at the end of all iterations in relation to (n)
+- the total number of iterations (i) goes through in relation to (n)
 
-So the way to think about nested loop in relation to one another is that when (j) is in relation to (i) we need to find up to what value of (n) do both loop run till. If (i) runs till n+4 and (j) runs till i+5 then we sub the value of (i) for n+4 and calculate up to what value of (n) does (j) run till.
-
-## Most Important Formulas
-
-- For calculating what value of (n) the loop runs till $n - y + x$ where range(y, n+x)
-- When the loop runs (n) times however, the value till what the loop runs till is always $n - 1$
-- For calculating nested loop value runs till $j = i - y + x$ where $i = n - y + x$
-- When the loop runs (i) times, the value at the end is $n - 1$ always
-- Nested loops that are related $\frac{n(n+1)}{2}$ where (n) is subbed for the value the inner loop runs till each iteration of the outer loop 
+Those values are then subbed into the total number of iterations (j) goes through in relation to (i);
+- j = i + c where (c) is some constant
+- (i) gets subbed by the arithmetic series formula where (n) is replaced by i = value in relation to (n) at the end of iterations
+- the constant then gets multiplied by total number of iterations (i) goes through and added to the other bit
