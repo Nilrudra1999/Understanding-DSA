@@ -1,6 +1,6 @@
 ## Analysis of simple_loop()
 
-Let n represent the value of the number passed to the function
+Let n represent the value of the number passed to the function<br>
 Let T(n) represent the total number of operations done by the function given n 
 
 ```python
@@ -19,7 +19,7 @@ Therefore, T(n) is O(n) Linear time complexity
 
 ## Analysis of skip_loop()
 
-Let n represent the value of the number passed to the function
+Let n represent the value of the number passed to the function<br>
 Let T(n) represent the total number of operations performed by the function given n
 
 ```python
@@ -30,7 +30,7 @@ def skip_loop(n):
     return total                    # 1
 ```
 
-$T(n) = 1 + \frac{n}{3} + 1 + \frac{n}{3} + 1$<Br>
+$T(n) = 1 + \frac{n}{3} + 1 + \frac{n}{3} + 1$<br>
 $T(n) = \frac{2n}{3} + 3$<br>
 Therefore, T(n) is O(n) Linear complexity
 
@@ -38,7 +38,7 @@ Therefore, T(n) is O(n) Linear complexity
 
 ## Analysis of nested_loop()
 
-Let n represent the value of the number passed to the function
+Let n represent the value of the number passed to the function<br>
 Let T(n) represent the total number of operations done by the function given n
 
 ```python
@@ -64,7 +64,7 @@ Therefore, T(n) is O($n^2$) quadratic complexity
 
 ## Analysis of other_nested_loop()
 
-Let n represent the value of the number passed to the function
+Let n represent the value of the number passed to the function<br>
 Let T(n) represent the total number of operations done by the function given n
 
 ```python
