@@ -45,7 +45,7 @@ total_time = 0
 # Calling a function a certain number of times to measure time taken over all iterations
 for i in range(AMOUNT_OF_DATA):
     start_time = time.perf_counter()
-    result = simple_loop(i)
+    result = nested_loop(i)
     end_time = time.perf_counter()
     total_time = (end_time-start_time)
     print(total_time)
