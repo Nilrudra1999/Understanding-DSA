@@ -178,6 +178,6 @@ def count_digits(n):
     return count        # 1
 ```
 
-$D(n) = 1 + log_1_0(n) + log_1_0(n) + log_n(10) + 1$<br>
-$D(n) = 3log_1_0(n) + 2$<br>
-Therefore, D(n) is O($log_1_0(n)$) logarithmic complexity
+$D(n) = 1 + \log{10}(n) + \log{10}(n) + log_n(10) + 1$<br>
+$D(n) = 3\log{10}(n) + 2$<br>
+Therefore, D(n) is O($\log{10}(n)$) logarithmic complexity
