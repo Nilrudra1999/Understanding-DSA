@@ -23,3 +23,5 @@ def fact(n):
         rc = n * fact(n-1)
     return rc
 ```
+
+![runtime_stack_and_recursion_image](https://github.com/user-attachments/assets/8ab04020-bb5b-416a-859c-6724f9a81483)
