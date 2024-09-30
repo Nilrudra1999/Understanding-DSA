@@ -5,8 +5,8 @@ However, for the analysis there is no timing experiments provided.
 
 ## Function 01
 
-Let n represent the value of the number passed to the function
-Let S(n) represent the total number of operations done by the function given n
+Let n represent the value of the number passed to the function<br>
+Let S(n) represent the total number of operations done by the function given n<br>
 
 ```python
 def sum_natural_numbers(n):
@@ -22,8 +22,8 @@ Therefore, S(n) is O(n) Linear complexity
 
 ## Function 02
 
-Let n represent the number the function needs to find a factorial for
-Let F(n) represent the total number of operations done by the function given n
+Let n represent the number the function needs to find a factorial for<br>
+Let F(n) represent the total number of operations done by the function given n<br>
 
 ```python
 def factorial(n):
@@ -39,8 +39,8 @@ Therefore, F(n) is O(n) Linear complexity
 
 ## Function 03
 
-Let n represent the length of the array passed to the function
-Let R(n) represent the total number of operations performed by the function given n
+Let n represent the length of the array passed to the function<br>
+Let R(n) represent the total number of operations performed by the function given n<br>
 
 ```python
 def reverse_array(arr):
@@ -56,8 +56,8 @@ Therefore, R(n) is O(n) linear complexity
 
 ## Function 04
 
-Let n represent the target number for the fibonacci sequence for this function
-Let f(n) represent the total number of operations done by the function given n
+Let n represent the target number for the fibonacci sequence for this function<br>
+Let f(n) represent the total number of operations done by the function given n<br>
 
 ```python
 def fibonacci(n):
@@ -75,8 +75,8 @@ Therefore, f(n) is O(n) linear complexity
 
 ## Function 05
 
-Let n represent the length of the list passed to the function
-Let M(n) represent the total number of operations done by the function given n
+Let n represent the length of the list passed to the function<br>
+Let M(n) represent the total number of operations done by the function given n<br>
 
 ```python
 def find_max(arr):
@@ -93,8 +93,8 @@ Therefore, M(n) is O(n) linear complexity
 
 ## Function 06
 
-Let n represent the length of the list passed to the function
-Let C(n) represent the total number of operations performed by the function given n
+Let n represent the length of the list passed to the function<br>
+Let C(n) represent the total number of operations performed by the function given n<br>
 
 ```python
 def count_occurrences(arr, x):
@@ -111,8 +111,8 @@ Therefore, C(n) is O(n) linear complexity
 
 ## Function 07
 
-Let n represent the length of the list passed to the function
-Let B(n) represent the total number of operations done by the function given n
+Let n represent the length of the list passed to the function<br>
+Let B(n) represent the total number of operations done by the function given n<br>
 
 ```python
 def bubble_sort(arr):
@@ -130,9 +130,9 @@ Therefore, B(n) is O($n^2$) quadratic complexity
 
 ## Function 08
 
-Let n represent the number the function is trying to check for prime
-Let P(n) representing the total number of operations done by the function given n
-For the analysis we will calculate the worst possible case
+Let n represent the number the function is trying to check for prime<br>
+Let P(n) representing the total number of operations done by the function given n<br>
+For the analysis we will calculate the worst possible case<br>
 
 ```python
 def is_prime(n):
@@ -150,8 +150,8 @@ Therefore, P(n) is O(sqrt(n)) root of n complexity
 
 ## Function 09
 
-Let n represent the quotient from the division of (a) and (b)
-Let G(n) represent the total number of operations done by function given n
+Let n represent the quotient from the division of (a) and (b)<br>
+Let G(n) represent the total number of operations done by function given n<br>
 
 ```python
 def gcd(a, b):
@@ -166,8 +166,8 @@ Therefore, G(n) is O(log(n)) logarithmic complexity
 
 ## Function 10
 
-Let n represent the target number passed to the function to count digits till
-Let D(n) represent the total number of operations done by the function given n
+Let n represent the target number passed to the function to count digits till<br>
+Let D(n) represent the total number of operations done by the function given n<br>
 
 ```python
 def count_digits(n):
@@ -180,4 +180,4 @@ def count_digits(n):
 
 $D(n) = 1 + \log_{10}(n) + \log_{10}(n) + log_n(10) + 1$<br>
 $D(n) = 3\log_{10}(n) + 2$<br>
-Therefore, D(n) is O($\log_{10}(n)$) logarithmic complexity
+Therefore, D(n) is O($\log_{10} n$) logarithmic complexity
