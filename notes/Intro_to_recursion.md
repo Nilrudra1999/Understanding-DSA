@@ -25,3 +25,45 @@ def fact(n):
 ```
 
 ![runtime_stack_and_recursion_image](https://github.com/user-attachments/assets/8ab04020-bb5b-416a-859c-6724f9a81483)
+
+## Analysis of This or Any Recursive Function
+
+Let n represent the value we pass to the function<br> 
+Let T(n) represent the number of operations done by fact() given n as argument<br>
+
+```python
+def fact(n):
+    rc = 1                  # 1
+    if n > 1:               # 1
+        rc = n * fact(n-1)  # 3 + T(n-1)
+                                # 3 operators not in a loop
+                                # T(n-1) because that is the cost of fact(n-1) call
+    return rc               # 1
+```
+
+$T(n) = 1 + 1 + 3 + T(n-1) + 1$<br>
+$T(n) = T(n-1) + 6$<br>
+$T(n-1) = T((n-1)-1) + 6$<br>
+$T(n-1) = T(n-2) + 6$<br>
+
+$T(n) = T(n-2) + 6 + 6$<br>
+
+$T(n-2) = T(n-3) + 6$<br>
+$T(n-3) = T(n-4) + 6$<br>
+$T(n-4) = T(n-5) + 6$ when n > 1<br>
+
+when n <= 1 but >= 0 then<br>
+$T(0) = 3$<br>
+$T(1) = 3$<br>
+Because the base case for the function exits after 3 operations.<br>
+But eventually we get to a number like T(2) after reducing (n) number of times<br>
+
+$T(2) = T(1) + 6 ... + 6$<br>
+$T(2) = 3 + 6 ... + 6$<br>
+$T(3) = 3 + 6 + 6 ... + 6$<br>
+So the pattern that emerges is the following:<br>
+$T(n) = 3 + 6(n-1)$<br>
+$T(n) = 3 + 6n - 6$<br>
+
+$T(n) = 6n - 3$ for n > 1<br>
+Therefore, T(n) is O(n) linear complexity for all values of n > 1.
