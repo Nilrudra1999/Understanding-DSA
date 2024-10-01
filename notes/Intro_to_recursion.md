@@ -58,12 +58,50 @@ $T(1) = 3$<br>
 Because the base case for the function exits after 3 operations.<br>
 But eventually we get to a number like T(2) after reducing (n) number of times<br>
 
-$T(2) = T(1) + 6 ... + 6$<br>
-$T(2) = 3 + 6 ... + 6$<br>
-$T(3) = 3 + 6 + 6 ... + 6$<br>
+$T(2) = T(1) + 6$<br>
+$T(2) = 3 + 6$<br>
+$T(3) = 3 + 6 + 6$<br>
 So the pattern that emerges is the following:<br>
 $T(n) = 3 + 6(n-1)$<br>
 $T(n) = 3 + 6n - 6$<br>
 
 $T(n) = 6n - 3$ for n > 1<br>
 Therefore, T(n) is O(n) linear complexity for all values of n > 1.
+
+## Fibonacci Function Code
+
+This function should accept a number and return the nth value of that number based on the sequence.<br>
+First the recursive version and then the iterative version. 
+
+### Recursive Version
+
+```python
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-2) + fib(n-1)
+```
+
+### Iterative Version
+
+```python
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        rc = 0
+        fn_1 = 1
+        fn_2 = 0
+        curr = 2
+        while curr <= n:
+            rc = fn_1 + fn_2
+            fn_2 = fn_1
+            fn_1 = rc
+            curr += 1
+        return rc
+```
