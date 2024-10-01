@@ -5,7 +5,7 @@ However, for the analysis there is no timing experiments provided.
 
 ## Function 01
 
-Let n represent the value of the number passed to the function<br>
+Let n represent the number passed to the function<br>
 Let S(n) represent the total number of operations done by the function given n<br>
 
 ```python
@@ -82,13 +82,13 @@ Let M(n) represent the total number of operations done by the function given n<b
 def find_max(arr):
     max_value = arr[0]      # 1
     for i in arr:           # n
-        if i > max_value:
+        if i > max_value:   # 1
             max_value = i   # 1 * n
     return max_value        # 1
 ```
 
-$M(n) = 1 + n + n + 1$<br>
-$M(n) = 2n + 2$<br>
+$M(n) = 1 + n + 1 + n + 1$<br>
+$M(n) = 2n + 3$<br>
 Therefore, M(n) is O(n) linear complexity
 
 ## Function 06
@@ -100,13 +100,13 @@ Let C(n) represent the total number of operations performed by the function give
 def count_occurrences(arr, x):
     count = 0                   # 1
     for i in arr:               # n
-        if i == x:
+        if i == x:              # 1 * n
             count += 1          # 1 * n
     return count                # 1
 ```
 
-$C(n) = 1 + n + n + 1$<br>
-$C(n) = 2n + 2$<br>
+$C(n) = 1 + n + n + n + 1$<br>
+$C(n) = 3n + 2$<br>
 Therefore, C(n) is O(n) linear complexity
 
 ## Function 07
@@ -119,13 +119,13 @@ def bubble_sort(arr):
     n = len(arr)                                        # 1
     for i in range(n):                                  # n + 1
         for j in range(0, n-i-1):                       # (n(n-1))/2 + 1
-            if arr[j] > arr[j+1]:                       
+            if arr[j] > arr[j+1]:                       # 1 * (n(n-1))/2                       
                 arr[j], arr[j+1] = arr[j+1], arr[j]     # 2 * (n(n-1))/2
     return arr                                          # 1
 ```
 
-$B(n) = 1 + (n+1) + (\frac{n(n-1)}{2} + 1) + n(n-1) + 1$<br>
-$B(n) = n^2 + \frac{n}{2}(n-1) + 4$<br>
+$B(n) = 1 + (n+1) + (\frac{n(n-1)}{2} + 1) + \frac{n(n-1)}{2} + n(n-1) + 1$<br>
+$B(n) = 2n^2 -2n + 4$<br>
 Therefore, B(n) is O($n^2$) quadratic complexity
 
 ## Function 08
@@ -139,13 +139,13 @@ def is_prime(n):
     if n <= 1:
         return False                        # best case
     for i in range(2, int(n ** 0.5) + 1):   # sqrt(n) + 1
-        if n % i == 0:                      
+        if n % i == 0:                      # 2 * sqrt(n)                
             return False                    # avg case
     return True                             # 1
 ```
 
-$P(n) = \sqrt{n} + 1 + 1$<br>
-$P(n) = \sqrt{n} + 2$<br>
+$P(n) = 2\sqrt{n} + \sqrt{n} + 1 + 1$<br>
+$P(n) = 3\sqrt{n} + 2$<br>
 Therefore, P(n) is O(sqrt(n)) root of n complexity
 
 ## Function 09
