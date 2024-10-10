@@ -13,7 +13,7 @@ This repo contains a collection of notes, programming experiments, graphical ill
 
 ## Folder Structure
 
-- Analysis folder (contains the results of asymptotic analysis and related code)
+- Analysis folder (contains the results of asymptotic analysis and related code, along with practice work)
 - Notes folder (contains commentary on analysis, related algorithms, and Data Structures)
 - Img folder (contains images of handwritten work, graphs, and etc) 
 
