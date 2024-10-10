@@ -1,0 +1,20 @@
+def remove(self, a):
+	if a.next == None and a.prev == None:
+		self.front = None
+		self.back = None
+	elif a.next != None and a.prev == None:
+		self.front = a.next
+		self.front.prev = None
+	elif a.next == None and a.prev != None:
+		self.back = a.prev
+		self.back.next = None
+	else:
+		a.next.prev = a.prev
+		a.prev.next = a.next
+
+
+
+return value, returning the data you just removed
+checking for empty list
+not cleaning up after a node was cleared
+		
