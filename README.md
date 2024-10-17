@@ -4,18 +4,19 @@ This repo contains a collection of notes, programming experiments, graphical ill
 
 ## General Repo Outline
 
-- For programming languages; JavaScript, C++, or Python is used
+- For programming languages some C++ but mainly Python is used
 - Asymptotic analysis is be performed before any timing experiments
 - Timing experiments are conducted to measure the correctness of analysis
 - The results from all timing experiments are graphed using GoogleSheets
-- Graphs used to plot timing experiments use scatter plots with trend-lines
-- A sample data size of 100+ is used for timing experiments
+- Various problem solving strategies from multiple problem domains are explored
+- Their solutions are implemented using a varity of Data Structures
 
 ## Folder Structure
 
-- Analysis folder (contains the results of asymptotic analysis and related code, along with practice work)
-- Notes folder (contains commentary on analysis, related algorithms, and Data Structures)
-- Img folder (contains images of handwritten work, graphs, and etc) 
+- Practise folder (contains practice work)
+- Notes folder (contains code analysis, algorithms, and Data Structure notes)
+- Images folder (contains images of handwritten work, graphs, and etc) 
+- Problem Solving folder (contains solutions/strategies for solving various abstract problems)
 
 ## 📄😎
 
