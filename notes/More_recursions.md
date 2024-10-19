@@ -1,7 +1,7 @@
 # More Recursion Notes, Functions, and Analysis
 
 First starting off with the steps to performing recursive analysis.<br>
-Using an example used in the pervious recursion paper, we need to analyze the steps needed to perform recursion analysis itself.<br>
+Using an example used in the pervious recursion notes, we break down the analysis into more steps.<br>
 
 ```python
 def fact(n):
@@ -20,23 +20,21 @@ Count the static statements like:
 
 ### Step 02
 
-Declaring variables which is a step even more important in recursive analysis.<br>
+Declaring variables, which is even more important in recursive analysis.<br>
 Since the variables will become the backbone of the base expression used to find the recursive pattern.<br>
 
 ### Step 03
 
-If there is an If statements or any conditional statements, they always run one times.<br>
-Within a loop that if statement may run ones every time the loop runs so (1 * n) or something like that.<br>
+If there is an If statements or any conditional statements, they always run ones, per recursive call.<br>
+Within a loop that if statement may run ones every time the loop runs so (1 * n).<br>
 
 ### Step 04
 
-When you get to the recursion statement count how many operators there are, in or not in loop.<br>
-Then using the T(n) expression figure out how the function call is being made;
+When you get to the recursion statement count how many operators there are.<br>
+Then using the an expression figure out how the function call is being made:<br>
 - is the call T(n-1) or T(n-2)
-- how many times is call made 1 time or 2 times
+- how many times is the call made?
 - if the call is made with (n-1) 2 times then the expression should be T(n-1) + T(n-1)
-- then add that to the constant of the number of operators (lets say 3) and you have
-- 3 + T(n-1) + T(n-1)
 
 ### Step 05
 
@@ -46,12 +44,12 @@ Then we sub T(n-k) where k is a constant, into T(n)'s expression, and we try to 
 - if T(n) = T(n-1) + 6
 - and T(n-1) = T(n-2) + 6
 - then T(n) = T(n-2) + 6 + 6
-- and so on T(n) = T(n-k) + 6 + 6 ... + 6 into infinity theoretically
+- and so on T(n) = T(n-k) + 6 + 6 ... + 6
 
 ### Step 06
 
-To stop overselves from going into infinity we have to remember that we do stop at some point.<br>
-We stop usually when n <= 1 so when n = 0 or when n = 1, because all of the above is true for n > 1<br>
+To stop overselves from going on infinitely we find what the base case is and count the constant number of operations for that case.<br>
+We stop usually when n <= 1 so when n = 0 or when n = 1.<br>
 So when n does eventually reach 1 from being subtracted by k a certain number of times, what is the value of T(n)<br>
 - T(1) = number of operations | counting conditions, assignments, and returns
 - T(0) = number of operations | same thing
@@ -80,16 +78,4 @@ def power(base, n):
     if n > 1:
         return rc = base * power(n-1)
     return rc
-```
-
-Fibonacci function using recursion.
-
-```python
-def fib(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return fib(n-2) + fib(n-1)
 ```

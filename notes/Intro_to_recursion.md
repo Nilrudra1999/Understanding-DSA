@@ -1,9 +1,7 @@
 # Introduction to Recursion, Analysis and Implementations
 
-The simplest recursively written function is the factorial function, which can also be written using a for-loop.<br>
 A Recursive function is a function which finds a solution to a problem by calling itself.<br>
-
-In the case of the factorial function:<br>
+The simplest recursively written function is the factorial function:<br>
 When n (the value being passed to the function for which we need a factorial for) is eqaul to 5<br>
 5! = 5 * (4 * 3 * 2 * 1)<br>
 5! = 5 * 4!<br>
@@ -14,7 +12,7 @@ And we can keep doing this on and on until we reach the 1st term.<br>
 Thus, we can simplify the operations of the function down to the following.<br>
 n! = n * (n-1) * (n-2) ... * 1<br>
 And from this we build a base case (something all recursive functions need to stop calling itself)<br>
-In this function the base case can be {if n is > 1 then factorial is also > 1}<br>
+In this function the base case can be {if n is <= 1 then just return 1} returning stops the recursion.<br>
 
 ```python
 def fact(n):
@@ -26,10 +24,10 @@ def fact(n):
 
 ![runtime_stack_and_recursion_image](https://github.com/user-attachments/assets/8ab04020-bb5b-416a-859c-6724f9a81483)
 
-## Analysis of This or Any Recursive Function
+## Analysis of Any Recursive Function
 
 Let n represent the value we pass to the function<br> 
-Let T(n) represent the number of operations done by fact() given n as argument<br>
+Let T(n) represent the number of operations done by fact() given n as an argument<br>
 
 ```python
 def fact(n):
@@ -68,12 +66,11 @@ $T(n) = 3 + 6n - 6$<br>
 $T(n) = 6n - 3$ for n > 1<br>
 Therefore, T(n) is O(n) linear complexity for all values of n > 1.
 
-## Fibonacci Function Code
+## Another Common Recursive Function Code
 
 This function should accept a number and return the nth value of that number based on the sequence.<br>
-First the recursive version and then the iterative version. 
 
-### Recursive Version
+### Fibonacci Recursive Version
 
 ```python
 def fib(n):
@@ -85,7 +82,7 @@ def fib(n):
         return fib(n-2) + fib(n-1)
 ```
 
-### Iterative Version
+### Fibonacci Iterative Version
 
 ```python
 def fib(n):

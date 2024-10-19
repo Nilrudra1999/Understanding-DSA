@@ -1,7 +1,7 @@
 # More Iterative Analysis on Common Iteration Functions
 
 Below are further analysis on more common iterations using both for-loops and while loops.<br>
-However, for the analysis there is no timing experiments provided.
+However, for this analysis there is no timing experiments done.<br>
 
 ### Function 01
 
@@ -151,15 +151,15 @@ Single and Nested loops.<br>
 
 ### Single Loops
 
-In this category we for-loops and while-loops of the following kinds
+In this category we have for-loops and while-loops of the following kinds:
 - for(start, end) or for(end) or for(range) which all behave the same way
 - for(start, end, iterative interval) behaves differently since i skips the range at certain intervals
-- while(condition) this has the most differing behvaiors so cycles need to be counted
+- while(condition) this has the most differing behvaiors/counts depending on the condition ifself
 
 ### Nested Loops
 
-In this category we can either have independent nested loops or dependent nested loops
+In this category we can either have independent nested loops or dependent nested loops:
 - independent nested for loops is basically n * n in terms of behavior
-- same goes for while loops that are nested and independent, with while loop counting
-- dependant nested for loops is about using the arithmetic series formula to count the inner loop
-- same goes for while loops that are nested and dependent, with while loop counting
+- same goes for while loops that are nested and independent
+- dependant nested for-loops, we can use the arithmetic series formula to count the inner loop
+- same goes for while loops that are nested and dependent, plus while loop counting

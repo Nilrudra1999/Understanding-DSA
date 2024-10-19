@@ -1,6 +1,5 @@
 # The following functions were written either in Python, or another language and then converted over to Python
-# These algorithms are more like simple functions than actual algorithms
-# But they can be used to understand the fundementals of asymptotic analysis
+# They can be used to understand the fundementals of asymptotic analysis
 
 # Function 01
 def greet():

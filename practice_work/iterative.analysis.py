@@ -36,7 +36,6 @@ def other_nested_loop(n):
 # Timing experiments code --->
 import time
 
-
 # generate a list of unique random numbers (AMOUNT_OF_DATA unique values)
 # my_list = random.sample(range(1, AMOUNT_OF_DATA*10), AMOUNT_OF_DATA)
 AMOUNT_OF_DATA = 100
