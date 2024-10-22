@@ -23,6 +23,8 @@ Operations:
 All of these functions must have a O(1) runtime, except when the enqueue() function resizes.<br>
 Then the runtime becomes O(n).
 
+![queues_intro](https://github.com/user-attachments/assets/099cf5ca-212f-4462-98b6-9127d4710a29)
+
 ## Stacks
 
 Stacks have the FILO behavior, kind of like a stack of plates, where if some plate is on top nothing can be accessed underneath that plate until it's taken off. Some of the common operations and data members of a typical Stack class include the following:
@@ -41,3 +43,5 @@ Operations:
 
 All of these functions must have a O(1) runtime, except when the push() function resizes.<br>
 Then the runtime becomes O(n). Since resizing means making a new array and moving the old contents into it.
+
+![stacks_intro](https://github.com/user-attachments/assets/cf56cad2-2bc1-44de-a41d-42e326d56ab3)
