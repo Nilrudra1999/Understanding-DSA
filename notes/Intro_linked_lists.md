@@ -29,6 +29,8 @@ class SinglyLinkedList:
             self.next = None        # points to the next node
 ```
 
+![Singly_LL](https://github.com/user-attachments/assets/1a7e7302-f9e0-44f1-9378-54e40aaf39d5)
+
 ```python
 class DoublyLinkedList:
     def __init__(self):
@@ -42,6 +44,8 @@ class DoublyLinkedList:
             self.next = None        # points to the next node
             self.prev = None        # points to the previous node
 ```
+
+![Doubly_LL](https://github.com/user-attachments/assets/71dba72a-b1e9-4196-b470-28f933558f82)
 
 ## Linked List Operation Runtimes
 
