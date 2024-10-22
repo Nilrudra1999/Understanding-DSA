@@ -11,6 +11,8 @@ The goal here is to use i as the resting point for the smaller values in each co
 
 Quick sort is a recursive sorting algorithm, so once the pivot switches positions, we call the function itself. By passing a low and high index tracker for each sub-section of the array, before and after the recently set pivot. The array is still in place. This sorting algorithm in it's worst case can run in O($n^2$) however, in its best and avg cases it can run in O(nlog(n)) time complexity.
 
+![quicksort_1](https://github.com/user-attachments/assets/4bf493b5-70fe-4460-9047-608191a513bf)
+
 ```python
 def quick_sort(arr, start, end):
     if end <= start:                    # We have nothing left to sort
@@ -43,6 +45,8 @@ The use case for this algorithm are:
 
 Merge sort is another complex sorting algorithm, using the divide and conquer method.<br>
 Using recursion to divide our current array into 2 sub-arrays and call the merge sort function again. Then we keep doing this until each array only has 1 index element remaining, at which point we sort the individual arrays and merge them back together. Much like quick sort this sorting algorithm also has a runtime complexity of O(nlog(n)).
+
+![Merge_sort_algorithm_diagram svg](https://github.com/user-attachments/assets/dedf2b30-370c-4430-9f36-298e9857a773)
 
 ```python
 def merge_sort(arr,):
