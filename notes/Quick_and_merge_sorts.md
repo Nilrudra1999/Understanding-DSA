@@ -1,15 +1,15 @@
 # Understanding Quick and Merge Sorting
 
-A slightly more complicated algorithm than the simple sorts are Quick and Merge sort.<br> 
+A slightly more complicated algorithm than the simple sorts are Quick and Merge sort. But with better runtimes.<br> 
 This note explores what they are? why they are used? how they are written? and when to use them?<br>
 
 ## Quick Sort Algorithm
 
-Quick sort as an algorithm, sorts an array of some List like ADT with random access using the concept of a pivot. We usually start the pivot at then end of the array, and find the final resting place for the pivot (a value). Then with simple iterators, usually i and j, are compared to one another each time the a loop iterates. After comparison, any swaps occur using a temp variable while also checking if the value of j is always less than the pivot. 
+Quick sort, sorts a List like ADT with random access using the concept of a pivot. We usually start the pivot at then end of the array, and find the final resting place for the pivot's value. Then using simple iterators, usually (i) and (j), we compared their data each time the loop iterates. After comparison, any swaps occur using a temp variable while also checking if the value of (j) is less than the pivot. 
 
-The goal here is to use i as the resting point for the smaller values in each comparison and use j as the resting point for any larger values in each comparison. All the while the pivot is also compared to j each time meaning when j becomes smaller than the pivot the pivot and j switch positions.
+The goal, is to use (i) as the resting point for the smaller values in each comparison and (j) as the resting point for the larger values in each comparison. All the while, the pivot is also compared to (j) so that when (j) becomes smaller than the pivot their data swap places.
 
-Quick sort is a recursive sorting algorithm, so once the pivot switches positions, we call the function itself. By passing a low and high index tracker for each sub-section of the array, before and after the recently set pivot. The array is still in place. This sorting algorithm in it's worst case can run in O($n^2$) however, in its best and avg cases it can run in O(nlog(n)) time complexity.
+Quick sort also uses recursion to sort. Once the pivot switches positions, we call the sort recursively. We split the original list/array into 2 sub-sections using index trackers, one sub-section to the left of the pivot and another to the right. Note: we don't make sub-arrays, all splits are done using index trackers on an in-place array. This sorting algorithm in it's worst case can run in O($n^2$) (which rarely occurs) however, in its best and avg cases can run in O(nlog(n)) time.
 
 ![quicksort_1](https://github.com/user-attachments/assets/4bf493b5-70fe-4460-9047-608191a513bf)
 
@@ -44,7 +44,7 @@ The use case for this algorithm are:
 ## Merge Sort Algorithm
 
 Merge sort is another complex sorting algorithm, using the divide and conquer method.<br>
-Using recursion to divide our current array into 2 sub-arrays and call the merge sort function again. Then we keep doing this until each array only has 1 index element remaining, at which point we sort the individual arrays and merge them back together. Much like quick sort this sorting algorithm also has a runtime complexity of O(nlog(n)).
+Using recursion to divide our current array into 2 sub-arrays and call the merge sort function recursively. Then we keep doing this until each array only has 1 index element remaining, at which point we sort the individual arrays and merge them back together. Much like quick sort this sorting algorithm also has a runtime complexity of O(nlog(n)).
 
 ![Merge_sort_algorithm_diagram svg](https://github.com/user-attachments/assets/dedf2b30-370c-4430-9f36-298e9857a773)
 
@@ -101,4 +101,4 @@ The use cases for this algorithm are:
 
 ## When to Use These Algorithms
 
-These algorithms have a better time comeplexity than the simple sorting algorithms like insertion, selection, and bubble sort. However, these algorithms have a worse space complexity than the simple sorting algorithms, since both quick and merge sort use recursion to sort the arrays. So the use cases of these algorithms come down to the trade off between time and space, if space is not an issue then using these sorts will save time, especially with larger data sets.
+These algorithms have a better time comeplexity than the simple sorting algorithms like insertion, selection, and bubble sort. However, these algorithms have a worse space complexity than the simple sorting algorithms. Since both quick and merge sort use recursion to sort the arrays their space complexity scales with the number of times they were called recursively O(n). So the use cases of these algorithms come down to the trade off between time and space, if space is plentiful then using these algorithms will save time, especially with larger data-sets.
