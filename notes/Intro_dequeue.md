@@ -27,7 +27,7 @@ Operations:
 
 ![dequeue03](https://github.com/user-attachments/assets/9574452e-ba8c-472a-ad26-bf086601d398)
 
-![dequeue04](https://github.com/user-attachments/assets/108cf49d-45bb-40b6-ba83-17df44e9633a)
+![dequeue04](https://github.com/user-attachments/assets/8b8daafd-23c3-4a6c-8210-1a9b5ae796f8)
 
 ![dequeue05](https://github.com/user-attachments/assets/de7c5a67-001c-4a42-b5b3-fd6c98d19513)
 
