@@ -47,3 +47,5 @@ class HashTable:
     def find_spot(self, key, flag):
         pass    # yet to be implemented
 ```
+
+![linear_probing_demo01](https://github.com/user-attachments/assets/ee2f8823-753f-4dd4-a87a-885528ca5845)
