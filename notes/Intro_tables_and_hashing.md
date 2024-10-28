@@ -5,26 +5,26 @@ Abstract Data Types define a set of operations without defining their underlying
 - these "records" store a key/identifier and a corresponding value
 - this collection is NOT ordered, its just a collection of stuff
 - but the keys are all unique (they have to be)
-- insert(key,value) - adds a new key-value pair
-- modify(key, value) - changes the value for a given key
-- remove(key) - deletes a record with the matching key
-- search(key) - find the value with that key
+- C: insert(key,value) - adds a new key-value pair
+- R: search(key) - find the value with that key
+- U: modify(key, value) - changes the value for a given key
+- D: remove(key) - deletes a record with the matching key
 
-Depending on which of those operations are more important to users, the Table ADT class can be implemented using various different underlying data structures. Some underlying data structures will allow for faster searching at the cost of insertion or removal, while others allows for avg. runtimes across all operations. So when implementing the Table ADT class its important to understand the trade-offs between different underlying data structures, in terms of operational speed.
+Depending on which of those operations are more important to users, the Table ADT class can be implemented using differening underlying data structures. Some underlying data structures will allow for faster searching at the cost of insertion or removal, while others allows for avg. runtimes across all operations. So when implementing the Table ADT class its important to understand the trade-offs between different underlying data structures, in terms of operational speed.
 
 ## Non-Hashed Table Implementations and Runtimes
 
 If a Table was implemented using a sorted array the following would be true in-terms of runtimes of various operations:
 - insert(key,value) - O(n)
+- search(key) - O(log n)
 - modify(key, value) - O(log n) + O(1)
 - remove(key) - O(log n) + O(n)
-- search(key) - O(log n)
 
 On the other hand a Table implemented using an unsorted array, the following would be true in-terms of runtimes:
 - insert(key,value) - O(1)
+- search(key) - O(n)
 - modify(key, value) - O(n) + O(1)
 - remove(key) - O(n) + O(1)
-- search(key) - O(n)
 
 Thus, in situations where Table ADTs require fast searching and modification at the cost of insertion and removal, using a sorted array as the underlying data structure is good. Places like a hospital's record system can use Tables implemented with sorted arrays, allowing them to search and modify patient records quickly. Unsorted arrays in contrast are a worse implementation of Table ADT classes, since searching is what Tables are usually built for and using an unsorted array means searching takes O(n) runtime.
 
@@ -62,3 +62,4 @@ Closed Addressing:
 Open Addressing:
 - check arr[hash_value % cap] to see if its empty
 - if not, then keep moving across until the "next" available spot
+- index = (hash_value + i) % cap
