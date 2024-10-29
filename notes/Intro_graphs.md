@@ -22,6 +22,8 @@ Digraphs also represent direction with their edges along with weights.<br>
 
 An adjacency matrix is in essence a 2 dimensional array which can be used to represent a Graph or store information about it. Where each vertex represent an index of the 2D array and the number of rows of the Adjacency Matrix represents the number of unique nodes of the Graph. The time complexity to find an edge is O(1) but the space complexity to store this data is O($n^2$).
 
+![adj_matrix_graphs](https://github.com/user-attachments/assets/ba878e5d-6322-41e4-b810-011f566f3d76)
+
 ### Graph Represented Using an Adjacency Matrix
 
 ```python
@@ -46,6 +48,8 @@ class Graph:
 ## Adjacency List
 
 Another way of representing a Graph is using an Adjacency List which is an array of LL objects. Each LL object inside an index of the array all have a unique node at the head of the linked list which represents a unique vertex. Then to form connections subsequent nodes are added which represent the other objects that are associated with the unique object, to form chain like connections. When adding an edge the node's address is added to the tail of the Linked list.
+
+![adj_list_graphs](https://github.com/user-attachments/assets/8e8488a9-593a-4d12-9d65-2fdf0b89c456)
 
 ### Graph Represented Using an Adjacency Matrix
 
@@ -86,6 +90,8 @@ class Graph:
 
 This algorithm is used to measure the shortest distance from one node to every other node in the graph.<br>
 Its used to digitally mapping shortest distance between nodes/objects which are connected to one another. Can be used to map locations in a city where the connections all represent roads/paths which can be taken to each node/location. At the beginning a single node is always picked from which to calculate paths to other nodes.
+
+![dij_graphs](https://github.com/user-attachments/assets/4e831881-0c96-4b89-90e5-62ccff6e0f56)
 
 ### Step 01 of This Algorithm
 
