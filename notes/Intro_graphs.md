@@ -4,11 +4,17 @@ Graphs are used to model data, where the most important thing is the relationshi
 The formal definition of a graph is: G = (V,E) where each edge E defines a connection between (u,v) = V.<br>
 This means that a graph is made of node/vertices and edges/connections between the nodes.<br>
 
+![basic_graph](https://github.com/user-attachments/assets/029318b4-b664-4ddb-8ed3-e0d0461e702e)
+
 Each vertex/node of a graph is an object and the edges represent the relationship between these objects.<br>
 If we want to represent and store the information associated with an object and its connections to others, we can do so by creating a record and storing that record into a table. Specifically, a Hash Table, keeping in mind the method of insertion and searching.
 
+![edge_def](https://github.com/user-attachments/assets/3a5d100e-0df0-44d8-a6bf-b8759ab9e701)
+
 Aside from identifying a connection between vertices, edges can also have weights.<br>
 Digraphs also represent direction with their edges along with weights.<br>
+
+![digraphs](https://github.com/user-attachments/assets/06d4518f-4a57-4ef0-81b1-6abdf20f74f3)
 
 ## Adjacency Matrix
 
