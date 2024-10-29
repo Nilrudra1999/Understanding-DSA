@@ -22,15 +22,15 @@ class HashTable:
                 temp_list[i] = self.table[i]
             self.table = temp_list
             self.cap = new_cap
-        index = find_spot(key, 'create')
+        index = self.find_spot(key, 'create')
         self.table[index].append((key, value))
         self.size += 1
 
     def search(self, key):
-        return find_spot(key, 'find')
+        return self.find_spot(key, 'find')
 
     def delete(self, key):
-        index = find_spot(key, 'remove')
+        index = self.find_spot(key, 'remove')
         if index:
             self.table[index] = 'T'
             self.size -= 1
@@ -38,7 +38,7 @@ class HashTable:
         return False
 
     def modify(self, key, value):
-        index = find_spot(key, 'update')
+        index = self.find_spot(key, 'update')
         if index:
             self.table[index][1] = value
             return True
