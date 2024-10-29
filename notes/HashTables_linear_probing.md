@@ -23,7 +23,6 @@ class HashTable:
                 temp_list[i] = self.table[i]    # does resizing shuffle the elements? like in a queue
             self.table = temp_list
             self.cap = new_cap
-
         index = self.find_spot(key, 'create')
         if index == None:
             raise IndexError('Trying to create with duplicate key')
@@ -65,7 +64,6 @@ class HashTable:
                     return None
             i += 1
             index = (hash(key)+i) % self.cap
-        
         if self.table[index] == None and flag == 'create':
             return index
         elif self.table[index] == None and flag == 'find':
