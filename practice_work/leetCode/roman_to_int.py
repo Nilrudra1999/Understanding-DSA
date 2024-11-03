@@ -7,8 +7,8 @@
 # Solution 01: Using a Hash Map to store Key:value pairs and KeyCombo:value pairs
 # -------------------------------------------------------------------------------------------------------------------------
 # This algorithm uses a Hash Table or python dictionary to map the Roman Numerials as keys to their values
-# Every loop iteration the index[i] is checked and index[i+1] together to add the value of the KeyCombo iff they exist
-# If not then only index[i] string "Key" is checked inside the Hash Map and the value associated is added to rc
+# Every loop iteration index[i] is checked with index[i+1] together to add the value of the KeyCombo iff they exist
+# If not then only index[i] "Key" is checked as a string inside the Hash table and the value associated is added to rc
 # The space complexity is O(1) since no matter how big the length of the string got the Hash Map stays the same size
 # The time complexity of this algorithm is O(n) since the loop runs for (n) iterations where n = len(str)
 # -------------------------------------------------------------------------------------------------------------------------

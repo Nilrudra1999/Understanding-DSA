@@ -1,12 +1,12 @@
 # General Connections between the various topics of DSA
 
-DSA is comprised of two main topics or areas of study, Data Structures and Algorithms.<br>
-As the name of the field of study may suggest, Data Structures and Algorithms both go hand-in-hand to form solutions to problems which require code. When a problem is encountered, we recieve some inputs from the problem which are needed to find the solution. We take those inputs then either store/access them or compute using them to form outputs which are part of the solution. Data Structures and Algorithms are used in the process of computing those solutions outputs.
+DSA is comprised of two main areas of study, Data Structures and Algorithms, which go hand-in-hand to form solutions for problems.<br>
+When a problem is encountered, some input is received thats needed to find the solution, the inputs are either stored/accessed to compute a value which becomes the output/solution. Data Structures and Algorithms are used in the process of creating the code to compute these solutions.
 
 ### Areas of Study
 
 This subject can be broken down into smaller portions which all have their own intricacies.<br>
-To better understand these intricacies and how they're all related we can break the topics into the chart below and study each portion. Then try to see how each individual portion is connected to the other portions, or if any connection exists between them at all.<br>
+To better understand these intricacies and how they're all related the topics can be broken down, like in the chart below. Afterwards each topic can be explored to see how the individual portion connect to others, or if they're connected at all.<br>
 
 | ADTs   | Algorithms | ADT's connections | Algorithm's connections | Studied? |
 |--------|------------|-------------------|-------------------------|----------|
