@@ -4,18 +4,17 @@ This repo contains a collection of notes, programming experiments, graphical ill
 
 ## General Repo Outline
 
-- Programming language: some C++ but mainly Python
+- Programming language: Python
 - Asymptotic analysis: performed as part of practice work
 - Timing experiments: conducted to measure the correctness of analysis
 - The results from all timing experiments are graphed using GoogleSheets
-- Problem solving: practised through LeetCode and some Abstract problems
+- Practice: Problem solving through LeetCode and some Abstract problems
 
 ## Folder Structure
 
 - Practise folder (contains practice work)
 - Notes folder (contains code Analysis, Algorithms, and Data Structure notes)
 - Images folder (contains images of handwritten work, graphs, and etc) 
-- Problem Solving folder (contains solutions/strategies for solving various abstract problems)
 
 ## 📄😎
 

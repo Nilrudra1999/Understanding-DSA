@@ -1,1 +1,0 @@
-# A Detailed Look at Tables and Their Operations
