@@ -1,22 +1,32 @@
 # Intro to DSA and Algorithm Analysis
 
-Before performing any asymptotic analysis its paramount to understand the basic components at play.<br>
-What growth rates, upper and lower bounds, time complexity, and asymptotic analysis are, also how they all fit together.<br>
+Before performing asymptotic analysis its critical to understand the basic components and how they all fit together.<br>
+Components such as:
+- Growth Rate
+- Upper and Lower Bounds
+- Time Complexity
+- Resources
+- Asymptotic Analysis
+- Algorithms
+- Data Structures
 
-A general definition with all the topics together can be as follows. Asymptotic analysis is a mathematical notation used to state the upper and lower bounds of a function, could be $T(n)$. Where $T(n)$ can represent the avg growth rate of an algorithm, which measures the increase in resource consumption as the input data size increases. Upper bound can be expressed as 
-$T(n) \leq c\cdot f(n)$ for all values of $n \geq n_0$ where (c) constant's value doesn't matter but is equivalent to (n).
+### A general definition of this topics can be as follows:
+
+```
+Asymptotic analysis is a mathematical notation used to state the upper and lower bounds of an algorithm, commonly expressed as $T(n)$. Where $T(n)$ can represent the avg growth rate that measures the increase in resource consumption as the input data size increases. Upper bound can be expressed as $T(n) \leq c\cdot f(n)$ for all values of $n \geq n_0$ where (c) constant's value doesn't matter but is always equivalent to (n).
+```
 
 ![time-complexity-examples](https://github.com/user-attachments/assets/10eecc16-be0f-4c63-8463-ba0b3a29ac90)
 
-## General Definitions
+## Some Definitions
 
-### Data Structures: 
+### Data Structures:
 
-A way of organizing and storing data in a computer such that it can be accessed and used efficiently from memory.
+A way of organizing and storing data in a computer such that it can be accessed and used efficiently from memory, ideally in O(1) time.
 
 ### Algorithms: 
 
-A finite sequence of steps used to solve a problem, usually when provided an input to generate an output.
+A finite sequence of steps used to solve a problem, usually when provided an input to generate the output/solution.
 
 ### Resources: 
 
