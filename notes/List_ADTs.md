@@ -28,3 +28,26 @@ LIST ADTs can be defined as the following:
 4. Allows Searching operations (bi-directionally)
 5. Allows Modifying operations (at the nth position)
 6. Allows Removal operations (from the nth position)
+
+## Implementations of LIST ADTs - Data Structures
+
+Implementations of list Data Structures which follow the definition closely are:<br>
+Arrays (contains C++ vectors & Python lists)<br>
+Linked Lists (contains Singly, doubly, & Sentinal LL)<br>
+
+Implementations of list Data Structures that impose their own behavior are:<br>
+Stack (FILO)<br>
+Queue (FIFO)<br>
+Deque (Double ended Queue)<br>
+
+These can be defined as "LIST Like" in nature.<br>
+In the same way that a C++ vector is C array like.<br>
+
+### Arrays
+
+A collection of contiguous elements in memory, ordered by their index, that alway starts at i = 0.<br>
+
+### Linked List
+
+A collection of nodes linked by pointers to form a chain like structure of all related data.<br>
+Its nodes can be scattered throughout memory so long as they're connected by pointers, they're linked.<br>
