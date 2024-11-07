@@ -47,7 +47,11 @@ In the same way that a C++ vector is C array like.<br>
 
 A collection of contiguous elements in memory, ordered by their index, that alway starts at i = 0.<br>
 
+![array_dia](https://github.com/user-attachments/assets/dceb5046-a848-4080-a0a6-4e41f360af55)
+
 ### Linked List
 
 A collection of nodes linked by pointers to form a chain like structure of all related data.<br>
 Its nodes can be scattered throughout memory so long as they're connected by pointers, they're linked.<br>
+
+![LL_dia](https://github.com/user-attachments/assets/45926111-81c2-4476-ba45-d4978c99fea7)
