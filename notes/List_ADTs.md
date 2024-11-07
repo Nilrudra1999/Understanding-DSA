@@ -1,7 +1,7 @@
 # Notes on LIST Abstract Data Types
 
 These notes will explore the following:
-- What is a LIST ADT?
+- ✅ What is a LIST ADT?
 - What are some implementations of LIST ADTs?
 - What does the code look like?
 - When should LISTs be used?
@@ -9,20 +9,22 @@ These notes will explore the following:
 - How are some LIST data structures the same?
 - How are they different?
 
-## What Are Some LIST ADTs
+## What Are Some LIST ADTs?
 
-### First lets define what an Abstract Data Type is
+### First defining what an Abstract Data Type is:
 
-```
-An Abstract Data Type, is the concept of a way of storing information inside a computer without the implementation details. It defines which operations this storage can perform and what sort of behavior the storage will have without specifying how the code would work or structurally what it'll look like.
-```
+An Abstract Data Type, is the concept of a way of storing information inside a computer without the implementation details. It defines which operations this storage can perform and what sort of behavior the storage will have without specifying what the code will look.
 
-LIST ADTs are defined as the following, but some LISTs don't follow all aspects of this definition:
-- Collection of data that has some ordering
-- The data is either stored Contiguously or linked in sequence
-- The data can be traversed either Bidirectional or Unidirectional
-- The data can be randomly accessed or have behavioral restrictions
-- Allows insertion operations (with or without behavioral restrictions)
-- Allows Searching operations
-- Allows Modifying operations (with or without behavioral restrictions)
-- Allows Removal operations (with or without behavioral restrictions)
+### Second defining what a Data Structure is:
+
+A Data structure, is when an ADT is take and implemented throughly with working code. Data structures are the implementation detail dependent versions of Abstract Data Types, its when the idea of the storage actually becomes real and specific to it's unique implementation.
+
+### Then what is a LIST ADT?
+
+LIST ADTs can be defined as the following:
+1. A collection of data, thats related and/or has the same type
+2. The data is ordered, theres a 1st, 2nd, ... nth index
+3. Allows insertion operations (into the nth position)
+4. Allows Searching operations (bi-directionally)
+5. Allows Modifying operations (at the nth position)
+6. Allows Removal operations (from the nth position)

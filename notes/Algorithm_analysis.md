@@ -1,4 +1,4 @@
-# Intro to DSA and Algorithm Analysis
+# Introduction to Algorithm Analysis
 
 Before performing asymptotic analysis its critical to understand the basic components and how they all fit together.<br>
 Components such as:
@@ -10,11 +10,10 @@ Components such as:
 - Algorithms
 - Data Structures
 
-### A general definition of this topics can be as follows:
+### A general definition of these topics can be as follows:
 
-```
 Asymptotic analysis is a mathematical notation used to state the upper and lower bounds of an algorithm, commonly expressed as $T(n)$. Where $T(n)$ can represent the avg growth rate that measures the increase in resource consumption as the input data size increases. Upper bound can be expressed as $T(n) \leq c\cdot f(n)$ for all values of $n \geq n_0$ where (c) constant's value doesn't matter but is always equivalent to (n).
-```
+
 
 ![time-complexity-examples](https://github.com/user-attachments/assets/10eecc16-be0f-4c63-8463-ba0b3a29ac90)
 
