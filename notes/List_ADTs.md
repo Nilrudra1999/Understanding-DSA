@@ -2,7 +2,7 @@
 
 These notes will explore the following:
 - ✅ What is a LIST ADT?
-- What are some implementations of LIST ADTs?
+- ✅ What are some implementations of LIST ADTs?
 - What does the code look like?
 - When should LISTs be used?
 - Why should LISTs be used over other Data Structures?
@@ -53,5 +53,22 @@ A collection of contiguous elements in memory, ordered by their index, that alwa
 
 A collection of nodes linked by pointers to form a chain like structure of all related data.<br>
 Its nodes can be scattered throughout memory so long as they're connected by pointers, they're linked.<br>
+The data structure always has a front and back pointer pointing to the front and back nodes.<br>
+But depending on SLL or DLL, the nodes themselves may contain a prev pointer or not.<br>
+Additionally, sentinal LL have nodes which gaurd the front and back positions in the list.<br>
 
 ![LL_dia](https://github.com/user-attachments/assets/45926111-81c2-4476-ba45-d4978c99fea7)
+
+### Stack
+
+The collection enforces a First-In-Last-Out behavior, only inserting and removing from one side.<br>
+
+### Queue
+
+The collection enforces a First-In-First-Out behavior, inserting only from one sides.<br>
+However, removing can also only be done from one side but it must be the opposite side from inserting.<br>
+
+### Dequeue
+
+The collection enforces a double ended Queue nature, where insertion and removal happens on both sides.<br>
+Both sides of the Dequeue act like Queues.<br>
