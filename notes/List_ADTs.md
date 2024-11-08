@@ -63,12 +63,18 @@ Additionally, sentinal LL have nodes which gaurd the front and back positions in
 
 The collection enforces a First-In-Last-Out behavior, only inserting and removing from one side.<br>
 
+![stack_dia](https://github.com/user-attachments/assets/41ab6437-379c-446a-8e71-01dfaab2153a)
+
 ### Queue
 
 The collection enforces a First-In-First-Out behavior, inserting only from one sides.<br>
 However, removing can also only be done from one side but it must be the opposite side from inserting.<br>
 
+![queue_dia](https://github.com/user-attachments/assets/49fc08af-90eb-4e30-9259-292e6647d08e)
+
 ### Dequeue
 
 The collection enforces a double ended Queue nature, where insertion and removal happens on both sides.<br>
 Both sides of the Dequeue act like Queues.<br>
+
+![deqeue_dia](https://github.com/user-attachments/assets/17ec934f-802a-477e-bb7a-73e062bebcc1)
