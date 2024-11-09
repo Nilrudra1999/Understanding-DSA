@@ -155,73 +155,67 @@ class LinkedList:   # Doubly Linked List (unsorted)
             self.data = data
             self.nx = next
             self.pr = prev
-```
-
-```python
-		def get_data(self):
-			return self.data
-
-		def get_next(self):
-			return self.nx
-
-		def get_previous(self):
-			return self.pr
-
-	def get_front(self):
-		return self.front
-	
-	def get_back(self):
-		return self.back
-
-	def is_empty(self):
-		return self.front == None and self.back == None
-
-	def __len__(self):
-		return self.size
-
+        
+        def get_data(self):
+            return self.data
+        
+        def get_next(self):
+            return self.nx
+        
+        def get_prev(self):
+            return self.pr
+        
+    def get_front(self):
+        return self.front
+    
+    def get_back(self):
+        return self.back
+    
+    def is_empty(self):
+        return self.front == None and self.back == None
+    
     # Inserts at the end of the Linked List always O(1) time
-	def insert(self, data):
-		nn = self.Node(data)
+    def insert(self, data):
+        nn = self.Node(data)
         if self.is_empty():
             self.front = nn
             self.back = nn
-    		self.size += 1
+            self.size += 1
             return nn
         else:
             curr = self.back
             curr.nx = nn
             nn.pr = curr
             self.back = nn
-    		self.size += 1
+            self.size += 1
             return nn
     
     # Deletes data from a valid point in the LL O(1) time
-	def erase(self, node):
-		if node == None:
-			raise ValueError('Cannot erase a NULL node')
-		
-		if node == self.front:
-			self.front = node.nx
-			if self.front:
-				self.front.pr = None
-			else:
-				self.back = None
-		elif node == self.back:
-			self.back = node.pr
-			self.back.nx = None
-		elif node.pr and node.nx:
-			node.pr.nx = node.nx
-			node.nx.pr = node.pr
-		self.size -= 1
-	
+    def remove(self, node):
+        if node == None:
+            raise ValueError('Cannot remove a NULL pointer')
+        if node == self.front:
+            self.front = node.nx
+            if self.front:
+                self.front.pr = None
+            else:
+                self.back = None
+        elif node == self.back:
+            self.back = node.pr
+            self.back.nx = None
+        elif node.pr and node.nx:
+            node.pr.nx = node.nx
+            node.nx.pr = node.pr
+        self.size -= 1
+
     # Uses LL traversal algorithm to search for the data O(n) time
-	def search(self, value):
-		curr = self.front
-		while curr:
-			if curr.get_data() == value:
-				return curr
-			curr = curr.next
-		return -1
+    def search(self, value):
+        curr = self.front
+        while curr:
+            if curr.get_data() == value:
+                return curr
+            curr = curr.nx
+        return -1
 ```
 
 ## Code for Stack - Class
