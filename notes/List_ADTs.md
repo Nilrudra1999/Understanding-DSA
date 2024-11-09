@@ -144,6 +144,12 @@ class Array:
 ## Code for Linked List - Class
 
 ```python
+class LinkedList:
+    def init(self):
+        return rc
+```
+
+```python
 class LinkedList:   # Doubly Linked List (unsorted)
 	def __init__(self):
 		self.front = None
