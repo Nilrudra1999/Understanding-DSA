@@ -309,76 +309,75 @@ class Queue:
 ## Code for Dequeue - Class
 
 ```python
-class Deque:
-	def __init__(self, cap = 10):
-		self.data = [None] * cap
-		self.cap = cap
-		self.size = 0
-		self.front = 0
-		self.back = 0
-
-	def capacity(self):
-		return self.cap
-
+class Dequeue:
+    def __init__(self, cap = 10):
+        self.data = [None]*cap
+        self.cap = cap
+        self.size = 0
+        self.front = 0
+        self.back = 0
+    
+    def capacity(self):
+        return self.cap
+    
     def get_front(self):
-		return self.data[self.front]
+        if self.is_empty():
+            return None
+        return self.data[self.front]
+    
+    def get_back(self):
+        if self.is_empty():
+            return None
+        return self.data[self.back]
 
-	def get_back(self):
-		return self.data[self.back]
+    def is_empty(self):
+        return self.size == 0
 
-	def is_empty(self):
-		return self.size == 0
-
-	def __len__(self):
-		return self.cap
-	
     # Resizing operation happens in O(n) time
-	def __resize__(self):
-        tmp_deq = self.data
+    def resize(self):
+        tmp = self.data
         self.cap *= 2
-		self.data = [None] * self.cap
-		for i in range(self.size):
-            self.data[i] = tmp_deq[(self.front + i) % self.cap]
-		self.front = 0
-		self.back = self.size - 1
-
+        self.data  = [None]*self.cap
+        for i in range(self.size):
+            self.data[i] = tmp[(self.front + i) % self.cap]
+        self.front = 0
+        self.back = self.size - 1
+    
     # Insertion at front O(1) time, O(n) when resizing
-	def push_front(self, data):
-		if self.size == self.cap:
-			self.__resize__()
-
-		if self.size != 0:
-			self.front = (self.front - 1) % self.cap
-		self.data[self.front] = data
-		self.size += 1
+    def push_front(seld, data):
+        if self.size == self.cap:
+            self.resize()
+        if self.size != 0:
+            self.front = (self.front - 1) % self.cap
+        self.data[self.front] = data
+        self.size += 1
 
     # Deletion operation at front O(1)
-    def pop_front(self):
-		if self.size == 0:
-			raise IndexError('Cannot pop_front() on empty deque')
-		rc = self.data[self.front]
-		self.data[self.front] = None
-		self.front = (self.front + 1) % self.cap
-		self.size -= 1
-		return rc
+    def pop_front(seld, data):
+        if self.size == 0:
+            raise IndexError('Cannot pop front on empty dequeue')
+        rc = self.data[self.front]
+        self.data[self.front] = None
+        self.front = (self.front + 1) % self.cap
+        self.size -= 1
+        return rc
+    
+    # Insertion at back O(1) time, O(n) when resizing
+    def push_back(seld, data):
+        if self.size == self.cap:
+            self.resize()
+        if self.size != 0:
+            self.back = (self.back + 1) % self.cap
+        self.data[self.back] = data
+        self.size += 1
 
-    # Insertion at the back O(1) time, O(n) when resizing
-	def push_back(self, data):
-		if self.size == self.cap:
-			self.__resize__()
-
-		if self.size != 0:
-			self.back = (self.back + 1) % self.cap
-		self.data[self.back] = data
-		self.size += 1
-	
     # Deletion operation at back O(1)
-	def pop_back(self):
-		if self.size == 0:
-			raise IndexError('Cannot pop_back() on empty deque')
-		rc = self.data[self.back]
-		self.data[self.back] = None
-		self.back = (self.back - 1) % self.cap
-		self.size -= 1
-		return rc
+    def pop_back(seld, data):
+        if self.size == 0:
+            raise IndexError('Cannot pop back on empty dequeue')
+        rc = self.data[self.back]
+        self.data[self.back] = None
+        self.back = (self.back - 1) % self.cap
+        self.size -= 1
+        return rc
 ```
