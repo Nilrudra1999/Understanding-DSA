@@ -223,43 +223,40 @@ class LinkedList:   # Doubly Linked List (unsorted)
 ```python
 class Stack:
     def __init__(self, cap = 10):
-		self.stack = [None] * cap
-		self.cap = cap
-		self.size = 0
-
-	def capacity(self):
-		return self.cap
-
-    def get_top(self):
-		if self.size == 0:
-			return None
-		return self.stack[self.size-1]
-
-    def is_empty(self):
-		return self.size == 0
+        self.stack = [None]*cap
+        self.cap = cap
+        self.size = 0
     
-    def __len__(self):
-		return self.cap
+    def capacity(self):
+        return self.cap
+    
+    def get_top(self):
+        if self.is_empty():
+            return None
+        return self.stack[self.size - 1]
+    
+    def is_empty(self):
+        return self.size == 0
 
     # Insertion operation O(1) time without resizing and O(n) time when resizing
-	def push(self, data):
-		if self.size == self.cap:
-            tmp_st = self.stack
-			self.cap *= 2
-			self.stack = [None] * self.cap
-			for i in range(self.size):
-				self.stack[i] = tmp_st[i]
-		self.stack[self.size] = data
-		self.size += 1
-
+    def push(self, data):
+        if self.size == self.cap:
+            tmp = self.stack
+            self.cap *= 2
+            self.stack = [None]*self.cap
+            for i in range(self.size):
+                self.stack[i] = tmp[i]
+        self.stack[self.size] = data
+        self.size += 1
+    
     # Deletion runs in O(1) time always
-	def pop(self):
-		if self.size == 0:
-			raise IndexError('Cannot use pop() on empty stack')
-		self.size -= 1
-		rc = self.stack[self.size]
-		self.stack[self.size] = None
-		return rc
+    def pop(self):
+        if self.is_empty():
+            raise IndexError('Cannot pop an empty stack')
+        self.size -= 1
+        rc = self.stack[self.size]
+        self.stack[self.size] = None
+        return rc
 ```
 
 ## Code for Queue - Class
