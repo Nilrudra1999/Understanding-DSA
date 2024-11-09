@@ -144,24 +144,20 @@ class Array:
 ## Code for Linked List - Class
 
 ```python
-class LinkedList:
-    def init(self):
-        return rc
+class LinkedList:   # Doubly Linked List (unsorted)
+    def __init__(self):
+        self.front = None
+        self.back = None
+        self.size = 0
+    
+    class Node:     # Nodes of the Linked List
+        def __init__(self, data, next = None, prev = None):
+            self.data = data
+            self.nx = next
+            self.pr = prev
 ```
 
 ```python
-class LinkedList:   # Doubly Linked List (unsorted)
-	def __init__(self):
-		self.front = None
-		self.back = None
-		self.size = 0
-
-	class Node:     # Nodes of the Linked List
-		def __init__(self, data, next = None, prev = None):
-			self.data = data
-			self.nx = next
-			self.pr = prev
-
 		def get_data(self):
 			return self.data
 
