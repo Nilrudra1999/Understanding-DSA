@@ -264,49 +264,46 @@ class Stack:
 ```python
 class Queue:
     def __init__(self, cap = 10):
-		self.data = [None] * cap
-		self.cap = cap
-		self.size = 0
-		self.front = 0
-		self.back = 0
+        self.data = [None]*cap
+        self.cap = cap
+        self.size = 0
+        self.front = 0
+        self.back = 0
 
-	def capacity(self):
-		return self.cap
-
+    def capacity(self):
+        return self.cap
+    
     def get_front(self):
-		if self.is_empty():
-			return None
-		return self.data[self.front]
-    
+        if self.is_empty():
+            return None
+        return self.data[self.front]
+
     def is_empty(self):
-		return self.size == 0
-    
-    def __len__(self):
-		return self.cap
+        return self.size == 0
 
     # Insertion at the back O(1) time, O(n) when resizing
-	def enqueue(self, data):
-		if self.size == self.cap:
-            tmp_q = self.data
+    def enqueue(self, data):
+        if self.size == self.cap:
+            tmp = self.data
             self.cap *= 2
-			self.data = [None] * self.cap
-			for i in range(self.size):
-                self.data[i] = tmp_q[(tmp_q.front + i) % self.cap]
-			self.front = 0
-			self.back = self.size
-		self.data[self.back] = data
-		self.back = (self.back + 1) % self.cap
-		self.size += 1
+            self.data = [None]*self.cap
+            for i in range(self.size):
+                self.data[i] = tmp[(tmp.front + 1) % self.cap]
+            self.front = 0
+            self.back = self.size
+        self.data[self.back] = data
+        self.back = (self.back + 1) % self.cap
+        self.size += 1
 
     # Deletion at the front O(1) time
-	def dequeue(self):
-		if self.is_empty():
-			raise IndexError('Cannot use dequeue() on empty queue')
-		rc = self.data[self.front]
-		self.data[self.front] = None
-		self.front = (self.front + 1) % self.cap
-		self.size -= 1
-		return rc
+    def dequeue(self):
+        if self.is_empty():
+            raise IndexError('Cannot dequeue an empty queue')
+        rc = self.data[self.front]
+        self.data[self.front] = None
+        self.front = (self.front + 1) % self.cap
+        self.size -= 1
+        return rc
 ```
 
 ## Code for Dequeue - Class
