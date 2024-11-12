@@ -6,8 +6,6 @@ These notes will explore the following:
 - ✅ What does the code look like?
 - ✅ When should LISTs be used?
 - ✅ Why should LISTs be used over other Data Structures?
-- How are some LIST data structures the same?
-- How are they different?
 
 ## What Are Some LIST ADTs?
 
@@ -415,5 +413,3 @@ The greatest strength a list like data structure has is the random access nature
 - random access of elements
 - fast insertions and removal operations depending on behavior
 - useful for implementing behavioral based storage
-
-## How are Lists like data structures the same? How are they different?
