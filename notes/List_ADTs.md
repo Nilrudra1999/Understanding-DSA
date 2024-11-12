@@ -5,7 +5,7 @@ These notes will explore the following:
 - ✅ What are some implementations of LIST ADTs?
 - ✅ What does the code look like?
 - ✅ When should LISTs be used?
-- Why should LISTs be used over other Data Structures?
+- ✅ Why should LISTs be used over other Data Structures?
 - How are some LIST data structures the same?
 - How are they different?
 
@@ -408,3 +408,12 @@ Lists are the most basic data structures there is, an ordered collection with a 
 
 ## Why should LISTs be used over other Data Structures?
 
+Lists should be used when playing to the strengths of it's implementation. The idea of a list is to keep a collection of elements ordered based on the insertion of each element. This allows for fast insertion and sometimes removal as well, depending on if elements are removed from the back or front only. If the list is sorted then search times are O(log(n)) which is good for progressively larger data sizes. 
+
+The greatest strength a list like data structure has is the random access nature of the data structure. If random access is important for modification, or search operations then list data structures should be used. It should also be used since computer memory behaves in a similar way and it allows the code to be implemented more easily.
+- best for searching and modification of data
+- random access of elements
+- fast insertions and removal operations depending on behavior
+- useful for implementing behavioral based storage
+
+## How are Lists like data structures the same? How are they different?
