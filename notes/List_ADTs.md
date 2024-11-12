@@ -4,7 +4,7 @@ These notes will explore the following:
 - ✅ What is a LIST ADT?
 - ✅ What are some implementations of LIST ADTs?
 - ✅ What does the code look like?
-- When should LISTs be used?
+- ✅ When should LISTs be used?
 - Why should LISTs be used over other Data Structures?
 - How are some LIST data structures the same?
 - How are they different?
@@ -381,3 +381,30 @@ class Dequeue:
         self.size -= 1
         return rc
 ```
+
+## When should LISTs be used?
+
+Lists are the most basic data structures there is, an ordered collection with a specified size. Typically, they are almost always used but there can be specific use cases for them too. So When should they be used?
+
+| LIST Data Structures     | When is It Important to Use Them?                                      |
+|--------------------------|------------------------------------------------------------------------|
+| Arrays (unsorted)        | When random access to elements is required                             |
+|                          | Having elements contiguous in memory is important, for utilizing cache |
+|                          | Requires fast/frequent insertion but removal doesn't matter            |
+|                          | Requires O(1) modification times and at least O(n) search times        |
+| Linked Lists (unsorted)  | Random Access is important                                             |
+|                          | Contiguous memory is not important                                     |
+|                          | Requires fast insertion and fast removal, in O(1) time                 |
+|                          | Requires O(1) modification time, O(n) search times is acceptable       |
+| Stacks                   | When reversing strings                                                 |
+|                          | Used for comparing the most recent value, so checking parentheses      |
+|                          | When backtracking and managing the most recent state is important      |
+|                          | Insertion and removal requires as fast as possible runtime             |
+|                          | When search and modification operations won't be used                  |
+| Queues                   | When ordering items based on insertion is important                    |
+|                          | Handling asynchronous data is required, or simulating line-ups         |
+|                          | Insertion and removal requires fast runtimes                           |
+|                          | Search and modification are not needed                                 |
+
+## Why should LISTs be used over other Data Structures?
+
