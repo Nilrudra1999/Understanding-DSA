@@ -3,12 +3,15 @@
 These notes will explore the following:
 - ✅ What is Iteration and Recursion?
 - ✅ What does the code look like?
-- When should iteration be used vs recursion?
-- Why should iteration be used over recursion?
+- ✅ When should iteration be used vs recursion?
+- ✅ Why should iteration be used over recursion?
 
 ## What is Iteration and Recursion?
 
-Iterative algorithms use a block of code known as a "loop" to repeatedly perform a task(s), multiple times. They exit either after some condition is fulfilled or the computation it was performing gets completed. Generally, loops have a runtime complexity of O(n) where (n) represents the length of some value or set of data which the loop iterates over. Nested loops have a runtime complexity of O($n^a$) where (a) represents the number of loops running in total. This is because every single time a loop is nested the outer loop runs (n) times and the inner runs (n) times independently for each iteration of the outer loop.<br>
+### Iteration
+
+Iterative algorithms use a block of code known as a "loop" to repeatedly perform a task(s), multiple times. They exit either after some condition is fulfilled or the computation it was performing gets completed. Generally, loops have a runtime complexity of O(n) where (n) represents the length of some value or set of data which the loop iterates over. Nested loops have a runtime complexity of O($n^a$) where (a) represents the number of loops running in total. This is because every single time a loop is nested the outer loop runs (n) times and the inner runs (n) times independently for each iteration of the outer loop.
+
 If however the inner loop is dependent on the outer loop like shown below:
 
 ```python
@@ -25,6 +28,8 @@ $\frac{n}{2}(2a + (n-1)d)$ Second formula:<br>
 - Where (n) represents the number of iterations the outer loop has
 - (a) represents the first number of iterations of the inner loop (just the value itself)
 - (d) represents the difference between each iteration of the inner loop
+
+### Recursion
 
 Recursion on the other hand, is used to perform similar functions to a loop, where some tasks or set of tasks are repeated until some exit condition is met. The difference, is that recursion works by calling the same function over and over again. This is a much more dangerous method of solving an iterative problem, since this could lead to a stack overflow from too many function calls if the exit condition is not met. Though both methods can reach similar runtimes, recursion has an O(n) space complexity where (n) represents total number of function calls made on the stack, while iteration has a O(1) space complexity since it solves for the problem in-place.
 
