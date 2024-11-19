@@ -91,8 +91,13 @@ class HashTable:
         if self.size == self.cap:
             new_cap = self.cap * 2
             tmp_list = [None] * new_cap
+            self.st = [self.arr_st.empty] * new_cap
             for i in range(self.size):
-                tmp_list[i] = self.table[i]
+                key, value = self.table[i]
+                index = self.find_spot(key, self.flag.insert)
+                if index != None:
+                    tmp_list[index] = self.table[i]
+                    self.st[index] = self.arr_st.full
             self.table = tmp_list
             self.cap = new_cap
         index = self.find_spot(key, self.flag.insert)
