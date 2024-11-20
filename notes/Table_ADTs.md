@@ -4,8 +4,8 @@ These notes will explore the following:
 - ✅ What is a TABLE ADT?
 - ✅ What are some implementations of TABLE ADTs?
 - ✅ What does the code look like?
-- When should TABLEs be used?
-- Why should TABLEs be used over other Data Structures?
+- ✅ When should TABLEs be used?
+- ✅ Why should TABLEs be used over other Data Structures?
 
 ## What is a TABLE ADT?
 
@@ -149,3 +149,23 @@ class HashTable:
         elif self.table[index] == None and flag == self.flag.search:
             return None
 ```
+
+## When should TABLEs be used?
+
+Tables should be used when fast look-ups are needed along with storing records based importance. Below are some more situations when tables should be used over other data structures:
+- when the data being stored needs to have an associative relationship
+- when the uniquness of individual values is important
+- for counting and frequence calculations 
+- when mapping one set of elements to another
+
+Tasks like counting frequency, mapping two sets of data to form an associative relationship, are all tasks which fit a hash table the most. This form of data structure should then be used when the order of insertion doesn't matter, or when ordering is not the functionality we need.
+
+## Why should TABLEs be used over other Data Structures?
+
+Then the next most obvious question, is why use this over other data structures?<br>
+The unique advantages tables bring are: 
+- that they are extremely fast at looking values up due to the way values are ordered
+- the values stored as always associated with unique keys so searching them is simpler
+- they are capable of using memory more efficiently than list like data structures
+
+Thus, the reason why tables should be used over other data structures when the situations arises is because of their unique method of storing data. Which enables tables to have faster than avg. search times, along with data seperation (the ability to distinguish between different pieces of data, duplicate or not).
